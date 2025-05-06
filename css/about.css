@@ -1,0 +1,323 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+
+/* About Us Section */
+.about-us {
+  padding: 80px 20px;
+  background-color: #f1f1f1;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #333;
+  position: relative; /* To position the underline */
+  display: inline-block; /* So that underline behaves as expected */
+  transition: all 0.3s ease; /* Adds smooth transition for text and transform */
+}
+
+.about-title::after {
+  content: ''; /* Empty content for the underline */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Start with no width */
+  height: 3px;
+  background-color: #e74c3c; /* Red color for the underline */
+  transition: width 0.3s ease; /* Animate the width */
+}
+
+.about-title:hover {
+  color: #e74c3c; /* Change text color on hover */
+  transform: scale(1.1); /* Slightly scale the heading */
+}
+
+.about-title:hover::after {
+  width: 100%; /* Full width underline on hover */
+}
+
+/* About Content Section */
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 45%;
+  height: 450px; /* Fixed height */
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%; /* Fixed height */
+  object-fit: cover; /* Ensure image covers fixed area */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+  flex: 1;
+  max-width: 50%;
+  text-align: left;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+.about-text p:last-child {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image,
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+}
+
+/* culinary section */
+.culinary-section {
+  background: url("../images/abt-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.culinary-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #6c6c6c2d;
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  padding: 40px 30px;
+  color: #d8d7d4;
+  position: relative;
+  z-index: 2;
+}
+
+.culinary-container .cul-ttl {
+  position: relative;
+  display: inline-block;
+}
+
+.culinary-container .cul-ttl span {
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.culinary-container .cul-ttl span::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Adjust as needed */
+  left: 0;
+  width: 15%;
+  height: 4px;
+  background-color: rgb(217, 64, 13);
+}
+
+
+.culinary-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-top: 20px;
+}
+
+.sanskrit {
+  color: #000000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  padding-bottom: 2px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+
+/* Services Section */
+.services {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+/* Left-aligned Title with Underline Animation */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #222;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+  text-align: left;
+  /* Only applies to this title */
+}
+
+.section-title span {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.section-title span::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background-color: #e74c3c;
+  width: 50%;
+  transition: width 0.4s ease;
+}
+
+.section-title span:hover::after {
+  width: 100%;
+}
+
+/* Grid Layout */
+.services-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Service Cards */
+.service-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 5px solid transparent;
+  text-align: center;
+  /* Ensures icon + text remain centered */
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-card:hover .icon {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+/* Icon Style */
+.service-card .icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* Card Headings */
+.service-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+/* Card Paragraphs */
+.service-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Colored Bottom Borders */
+.border-red {
+  border-bottom: 5px solid #e74c3c;
+}
+
+.border-blue {
+  border-bottom: 5px solid #3498db;
+}
+
+.border-green {
+  border-bottom: 5px solid #2ecc71;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services {
+    padding: 40px 10px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .service-card {
+    padding: 25px 15px;
+  }
+
+  .service-card .icon {
+    font-size: 36px;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- navbar section -->
+    <section id="navbar">
+        <nav>
+            <!-- navbar logo of SekuwaHouse -->
+            <div class="nav-logo">
+                <a href="index.html"> <img src="./assets/logo.png" alt="SekuwaHouse">
+                </a>
+            </div>
+
+            <!-- navbar items -->
+            <div class="nav-items" id="navItems">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="service.html">Service</a>
+                <a href="menu.html">Menu</a>
+                <a href="contact.html">Contact</a>
+                <a href="policy.html">Privacy-Policy</a>
+            </div>
+
+            <!-- hamburger icon for mobile view -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Nav social icons -->
+            <div class="nav-social">
+                <a href="https://www.facebook.com/shresthakitchen" target="_blank" class="tooltip"
+                    aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                    <span class="tooltip-text">Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/shresthas_kitchen_sekuwa_house/" target="_blank" class="tooltip"
+                    aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span class="tooltip-text">Instagram</span>
+                </a>
+                <a href="mailto:shresthasekuwa@gmail.com" target="_blank" class="tooltip" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="tooltip-text">Email</span>
+                </a>
+                <a href="https://wa.me/9779708763888" target="_blank" class="tooltip" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span class="tooltip-text">WhatsApp</span>
+                </a>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Script for navbar toggle -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const hamburger = document.getElementById('hamburger');
+            const navItems = document.getElementById('navItems');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navItems.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

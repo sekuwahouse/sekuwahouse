@@ -1,0 +1,254 @@
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    color: #222;
+    overflow: hidden;
+}
+
+/* Dine With Us Section */
+.dine-section {
+    padding: 100px 20px;
+    background-color: #fff7f0;
+}
+
+.dine-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack the text and content vertically */
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    /* Center the text horizontally */
+}
+
+.dine-text {
+    margin-bottom: 30px;
+    /* Add space between text and the image+dine boxes */
+}
+
+.dine-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #b84d1d;
+}
+
+.dine-text p {
+    font-size: 1.1rem;
+    color: #0e0d0d;
+    line-height: 1.6;
+    margin-top: 0;
+}
+
+/* Dine Content: Image + Boxes */
+.dine-content {
+    display: flex;
+    justify-content: space-between;
+    /* Align image on the left and boxes on the right */
+    gap: 30px;
+    /* Space between image and boxes */
+    flex-wrap: wrap;
+    /* Allow content to wrap if needed */
+    align-items: center;
+}
+
+.dine-image {
+    flex: 1;
+    /* Shrink base size from 400px to 300px */
+    max-width: 45%;
+    /* Optional: set a max-width to control actual size */
+}
+
+.dine-image img {
+    width: 100%;
+    height: 350px;
+    /* Set desired height */
+    object-fit: cover;
+    /* Crop to fit the container while covering */
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.dine-box-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack the dine boxes vertically */
+    gap: 20px;
+    /* Space between each dine box */
+    flex: 1;
+    max-width: 50%;
+    /* Set max width for the dine boxes */
+}
+
+.dine-box {
+    background: #fff;
+    border-left: 5px solid #b84d1d;
+    padding: 20px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    /* Center icon and text vertically */
+    gap: 15px;
+    text-align: left;
+    /* Align text to the left */
+}
+
+.dine-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.dine-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.dine-box p {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+
+}
+
+/* Icon in dine box */
+.dine-icon {
+    font-size: 1.5rem;
+    color: #b84d1d;
+    flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dine-container {
+        padding: 20px;
+    }
+
+    .dine-text h2 {
+        font-size: 2rem;
+    }
+
+    .dine-text p {
+        font-size: 1rem;
+    }
+
+    .dine-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .dine-image {
+        max-width: 100%;
+    }
+
+    .dine-image img {
+        height: 200px;
+    }
+
+    .dine-box-container {
+        max-width: 100%;
+    }
+}
+
+
+
+/* Container for services */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 4rem 2rem;
+    /* background: url("https://plus.unsplash.com/premium_photo-1700746099373-61c0b063c09b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center; */
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-align: center;
+    color: #b92b27;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 3rem;
+}
+
+/* Grid Layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Service Card */
+.service-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 18px;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+    color: #222;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Icons */
+.service-icon {
+    font-size: 2.8rem;
+    color: #b92b27;
+    margin-bottom: 1rem;
+    transition: transform 0.3s;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.2);
+}
+
+/* Titles */
+.service-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Description */
+.service-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+/* Responsive */
+@media (max-width: 500px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+}
