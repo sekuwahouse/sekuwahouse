@@ -1,47 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shrestha SekuwaHouse</title>
-    <!-- favicon -->
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
-    <!-- Font Awesome CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <!-- navbar section -->
-    <div id="navbar"></div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <h1 class="hero-title">Welcome  to 
-           Shrestha <br> SekuwaHouse</h1>
-        <p class="hero-subtitle">
-          Your favorite destination for delicious Sekuwa, crafted with love.
-        </p>
-        <a href="menu.html" class="btn">Explore Our Menu</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shrestha SekuwaHouse</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <!-- navbar section -->
+  <div id="navbar"></div>
+  +
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Shrestha SekuwaHouse</h1>
+      <p>Authentic taste, unforgettable experience</p>
+      <div class="hero-buttons">
+        <a href="menu.html" class="btn btn-primary">View Menu</a>
+        <a href="contact.html" class="btn btn-secondary">Book a Table</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- about-us section -->
-     <div id="about-us"></div>
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="stat">
+      <h2 class="counter" data-target="145">0</h2>
+      <p>Satisfied Customers</p>
+    </div>
+    <div class="stat">
+      <h2 class="counter" data-target="50">0</h2>
+      <p>Delicious Dishes</p>
+    </div>
+    <div class="stat">
+      <h2 class="counter" data-target="1">0</h2>
+      <p>Years of Excellence</p>
+    </div>
+  </section>
 
-     <!-- menu section -->
-      <div id="menu-sections"></div>
+  <!-- about section -->
+  <div id="about-container"></div>
 
-    <!-- footer section -->
-    <div id="footer"></div>
+  <!-- menu section -->
+  <div id="menu-container"></div>
 
-    <script src="./js/script.js"></script>
-  </body>
+  <!-- footer section -->
+  <div id="footer"></div>
+
+
+  <script src="./js/script.js"></script>
+</body>
+
 </html>
